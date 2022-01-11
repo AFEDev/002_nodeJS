@@ -30,10 +30,10 @@ const vidurkis = (x) => {
 
 vidurkis(a1);
 
-const s1 = "mike Pukuotukas";
-const s2 = "Chuck Norris";
-const s3 = "Wonder WomaN";
-const s4 = "Algimantas cekuolis";
+// const s1 = "mike Pukuotukas";
+// const s2 = "Chuck Norris";
+// const s3 = "Wonder WomaN";
+// const s4 = "Algimantas cekuolis";
 
 function inicialai(pavadinimas) {
   const word = pavadinimas.split(" ");
@@ -44,10 +44,10 @@ function inicialai(pavadinimas) {
   );
 }
 
-inicialai(s1);
-inicialai(s2);
-inicialai(s3);
-inicialai(s4);
+// inicialai(s1);
+// inicialai(s2);
+// inicialai(s3);
+// inicialai(s4);
 
 const jonas = {
   name: "Jonas",
@@ -71,3 +71,25 @@ amzius = (vardas) => {
 
 amzius(jonas);
 amzius(maryte);
+
+const s1 = "mike Pukuotukas";
+const s2 = "Chuck Norris";
+const s3 = "Wonder WomaN";
+const s4 = "Algimantas cekuolis";
+
+const inicials = (name) => {
+  const word = name.split(" ");
+  const inicialsArray = [];
+
+  for (let i = 0; i < word.length; i++) {
+    inicialsArray.push(word[i][0].toUpperCase());
+  }
+  let arrayToString = "";
+
+  inicialsArray.forEach((letter) => {
+    arrayToString += letter + ".";
+  });
+  console.log(`Legendines asmenybes ${name} trumpinys yra ${arrayToString}`);
+};
+
+inicials(s1);
