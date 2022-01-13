@@ -82,7 +82,7 @@ const inicials = (name) => {
   const inicialsArray = [];
 
   for (let i = 0; i < word.length; i++) {
-    inicialsArray.push(word[i][0].toUpperCase());
+    word[i][0].toUpperCase();
   }
   let arrayToString = "";
 
@@ -93,3 +93,68 @@ const inicials = (name) => {
 };
 
 inicials(s1);
+
+function solution(number) {
+  let a = [];
+
+  for (let i = 1; i < number; i++) {
+    if (i < 0) {
+      break;
+    }
+
+    i % 3 && i % 5 ? "" : a.push(i);
+
+    // i % 5 ? "" : a.push(i);
+
+    //  a % 3 && a % 5 ? a.pop() : "";
+    console.log(a);
+  }
+  return a.reduce((a, b) => a + b, 0);
+}
+
+console.log(solution(16));
+
+function isIsogram(str) {
+  const a = [];
+  for (let i = 0; i < str.length; i++) {
+    a.push(str[i].toLowerCase());
+  }
+  return new Set(a).size == a.length;
+}
+
+console.log(isIsogram("Lilas"));
+
+//.toLowerCase()
+
+//return new Set(a).size == a.length;
+
+// let f = "labaslabas";
+
+// console.log(f[2]);
+
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
+
+/**
+ * Filter array items based on search criteria (query)
+ */
+const filterItems = (arr, query) => {
+  return arr.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
+};
+
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an").length); // ['banana', 'mango', 'orange']
+
+const strin = ["j", "g", "e", "i", "z", "f", "g", "o"];
+
+function getCount(str) {
+  let vowelsCount = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  vowelsCount = str.filter((str) => str.includes(vowels));
+
+  return console.log("testinam:", vowelsCount);
+}
+
+getCount(strin);
