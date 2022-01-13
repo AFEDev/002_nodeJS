@@ -1,7 +1,6 @@
 console.clear();
 
 const fs = require("fs/promises");
-const { parse } = require("path");
 
 (async () => {
   const drinksContent = await fs.readFile("./data/drinks.txt", "utf-8");
@@ -25,9 +24,9 @@ const { parse } = require("path");
     //let apyvarta = parseFloat(price) * parseInt(count);
     let apyvarta = +price * +count;
     console.log(
-      `Pasirinkimas ${++i}:, ${drinkDetails[0]} kurio kaina yra ${
-        drinkDetails[1]
-      } Eu kurio apyvarta yra ${apyvarta.toFixed(2)}`
+      `Pasirinkimas ${++i}: ${name} kurio kaina yra ${price} Eu kurio apyvarta yra ${apyvarta.toFixed(
+        2
+      )}`
     );
     const a = 3.14159264;
     console.log(a.toFixed(2));
